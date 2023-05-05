@@ -16,8 +16,8 @@
 #define BTN4_PIN PG_3 // No pull down
 
 // Inputs
-DigitalIn SW2(BTN1_PIN);
-DigitalIn SW3(BTN2_PIN);
+DigitalIn SW2(BTN3_PIN);
+DigitalIn SW3(BTN1_PIN);
 DigitalInOut SW4(BTN3_PIN,PIN_INPUT,PullDown,0);
 DigitalInOut SW5(BTN4_PIN,PIN_INPUT,PullDown,0);
 

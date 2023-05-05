@@ -75,7 +75,7 @@ int main()
         char rxBuffer[65];
         nsapi_size_or_error_t N = clt_sock->recv(rxBuffer, sizeof(rxBuffer)-1);   //Read (upto) 64 bytes
         rxBuffer[N] = 0;
-        printf("%s\n", rxBuffer);
+        disp.printf("%s\n", rxBuffer);
         rx = string(rxBuffer);             //String response as C++ string
 
         if (rx == "END") {                      //Are we done?

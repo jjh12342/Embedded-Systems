@@ -13,6 +13,7 @@ BusOut leds(TRAF_RED1_PIN, TRAF_YEL1_PIN, TRAF_GRN1_PIN);
 
 int main()
 {
+    leds = 7;
     while (true) {
         leds = 0;   //Binary 000
         wait_us(500000);

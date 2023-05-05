@@ -25,14 +25,18 @@ int main()
     tmr_flash.start();
 
     while (true) {
-
+ledRed = !ledRed;
         //Wait for switch press and release (by BLOCKING)
-        while (SW2.read() == 0);
-        ledRed = !ledRed;
+        while (SW2.read() == 0){
+        
         wait_us(300000);
+        };
 
-        while (SW2.read() == 1);
-        wait_us(300000);        
+
+        while (SW2.read() == 1){
+        wait_us(300000);   
+        };
+     
 
         //Toggle Yellow LED
         ledYel = !ledYel;

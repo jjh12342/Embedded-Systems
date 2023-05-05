@@ -9,7 +9,7 @@
 EthernetInterface net;
 char rbuffer[65];
 
-#define IPV4_HOST_ADDRESS "192.168.1.220"
+#define IPV4_HOST_ADDRESS "10.211.76.245"
 #define TCP_SOCKET_PORT 8080
 
 DigitalIn BlueButton(USER_BUTTON);
@@ -33,14 +33,14 @@ int main()
         socket.open(&net);
 
         //Option 1. Look up IP address of remote machine on the Internet
-        //net.gethostbyname("ifconfig.io", &a);
-        //printf("IP address of site: %s\n", a.get_ip_address() ? a.get_ip_address() : "None");
+        net.gethostbyname("ifconfig.io", &a);
+        printf("IP address of site: %s\n", a.get_ip_address() ? a.get_ip_address() : "None");
 
         //Option 2. Manually set the address (In a Windows terminal, type ipconfig /all and look for the IPV4 Address for the network interface you are using)
-        a.set_ip_address(IPV4_HOST_ADDRESS);
+        //a.set_ip_address(IPV4_HOST_ADDRESS);
 
         //Set the TCP socket port
-        a.set_port(TCP_SOCKET_PORT);
+        //a.set_port(TCP_SOCKET_PORT);
 
         //Connect to remote web server
         socket.connect(a);

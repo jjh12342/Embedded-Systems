@@ -40,9 +40,10 @@ int main() {
     int sw3 = SW3.read();
     long long sw2_time = tmr_debounce2.read_ms();
     long long sw3_time = tmr_debounce3.read_ms();
-
+    
     // Update yellow LED state and mealy outputs
     if (flash_time >= 500) {
+   //     printf("The time taken was %llu milliseconds\n", flash_time);
       ledYel = !ledYel;
       tmr_flash.reset();
     }
